@@ -28,7 +28,7 @@ var img9;
 var img10;
 
 function setup() {
-  canvas = createCanvas(800, 600);
+  canvas = createCanvas(960, 840);
   video = createCapture(VIDEO);
   video.hide();
   poseNet = ml5.poseNet(video, modelLoaded);
@@ -141,7 +141,7 @@ function drawKeypoints() {
           pNoseX = noseX;
           pNoseY = noseY;
           
-          img1.position(noseX-80, noseY-150);
+          img1.position(noseX-80, noseY-100);
 
         }
       }
