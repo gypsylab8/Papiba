@@ -141,7 +141,7 @@ function drawKeypoints() {
           pNoseX = noseX;
           pNoseY = noseY;
           
-          img1.position(noseX-80, noseY-350);
+          img1.position(noseX-80, noseY-150);
 
         }
       }
