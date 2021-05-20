@@ -28,7 +28,7 @@ var img9;
 var img10;
 
 function setup() {
-  canvas = createCanvas(960, 840);
+  canvas = createCanvas(800, 600);
   video = createCapture(VIDEO);
   video.hide();
   poseNet = ml5.poseNet(video, modelLoaded);
@@ -48,8 +48,6 @@ function setup() {
 }
 
 function preload(){
-
-  
   
 //preloading all the sounds needed to to be played once the model is ready
   pap1 = loadSound('pap1.mp3');
@@ -90,11 +88,6 @@ function gotPoses(poses) {
 }
 
 function draw() {
-  push();
-  translate(width,0);
-  scale(-1, 1);
-  image(video, 0, 0, width, height);
-  pop();
   
   //background(0,50);
   image(img2, 0, 0, width, height);
@@ -102,8 +95,8 @@ function draw() {
   image(img9, 0, 0, width, height);
   //fill(noseY, noseY/2, noseX/2);
  // rect(noseX, noseY, noseX/2, noseY);
-  
-    // We can call both functions to draw all keypoints and the skeletons
+	
+ // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
   drawSkeleton();
   posePlayer();
@@ -134,7 +127,7 @@ function drawKeypoints() {
           
           //pg.noStroke();
           //pg.ellipse(noseX+cos(angle*10)*5, noseY+sin(angle*10)*width/50, height/20, width/20);
-          pg.ellipse(noseX+cos(angle*10)*190, noseY+sin(angle*10)*50, random(12,3), random(3,12));
+          //pg.ellipse(noseX+cos(angle*10)*190, noseY+sin(angle*10)*50, random(12,3), random(3,12));
           
           
 
