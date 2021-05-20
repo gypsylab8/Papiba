@@ -89,20 +89,16 @@ function gotPoses(poses) {
 
 function draw() {
   
-  //background(0,50);
+ //background(0,50);
   image(img2, 0, 0, width, height);
   image(pg, 0, 0, width, height);
   image(img9, 0, 0, width, height);
-  //fill(noseY, noseY/2, noseX/2);
- // rect(noseX, noseY, noseX/2, noseY);
-	
+ //fill(noseY, noseY/2, noseX/2);
+ // rect(noseX, noseY, noseX/2, noseY);	
  // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
-  drawSkeleton();
-  posePlayer();
-  
-  
-  
+ // drawSkeleton();
+  posePlayer();  
  
 }
 
@@ -123,14 +119,12 @@ function drawKeypoints() {
           pg.stroke(random(0,255), random(0,255), random(0,255));
           pg.strokeWeight(random(3,10));
 
-         let angle = frameCount/120;
+          let angle = frameCount/120;
           
           //pg.noStroke();
           //pg.ellipse(noseX+cos(angle*10)*5, noseY+sin(angle*10)*width/50, height/20, width/20);
           //pg.ellipse(noseX+cos(angle*10)*190, noseY+sin(angle*10)*50, random(12,3), random(3,12));
           
-          
-
           pNoseX = noseX;
           pNoseY = noseY;
           
@@ -180,7 +174,7 @@ function posePlayer()  {
     // Seperating out the 17 keypoints posenet returns
     let nose = pose.keypoints[0];
     let leftEye = pose.keypoints[1];
-	let rightEye = pose.keypoints[2];
+    let rightEye = pose.keypoints[2];
     let leftEar = pose.keypoints[3];
     let rightEar = pose.keypoints[4];
     let leftShoulder = pose.keypoints[5];
